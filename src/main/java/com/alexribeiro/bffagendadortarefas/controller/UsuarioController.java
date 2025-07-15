@@ -3,7 +3,7 @@ package com.alexribeiro.bffagendadortarefas.controller;
 
 import com.alexribeiro.bffagendadortarefas.business.UsuarioService;
 import com.alexribeiro.bffagendadortarefas.business.dto.in.EnderecoDTORequest;
-import com.alexribeiro.bffagendadortarefas.business.dto.in.LoginRequest;
+import com.alexribeiro.bffagendadortarefas.business.dto.in.LoginRequestDTO;
 import com.alexribeiro.bffagendadortarefas.business.dto.in.TelefoneDTORequest;
 import com.alexribeiro.bffagendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.alexribeiro.bffagendadortarefas.business.dto.out.EnderecoDTOResponse;
@@ -46,7 +46,7 @@ public class UsuarioController {
     @ApiResponse(responseCode = "200", description = "Usuário logado com sucesso")
     @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
     @ApiResponse(responseCode = "500", description = "Erro no servidor")
-    public String login (@RequestBody LoginRequest usuarioDTO){
+    public String login (@RequestBody LoginRequestDTO usuarioDTO){
        return usuarioService.loginUsuario(usuarioDTO);
     }
 

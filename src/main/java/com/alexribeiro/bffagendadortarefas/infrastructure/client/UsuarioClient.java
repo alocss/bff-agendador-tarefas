@@ -1,7 +1,7 @@
 package com.alexribeiro.bffagendadortarefas.infrastructure.client;
 
 import com.alexribeiro.bffagendadortarefas.business.dto.in.EnderecoDTORequest;
-import com.alexribeiro.bffagendadortarefas.business.dto.in.LoginRequest;
+import com.alexribeiro.bffagendadortarefas.business.dto.in.LoginRequestDTO;
 import com.alexribeiro.bffagendadortarefas.business.dto.in.TelefoneDTORequest;
 import com.alexribeiro.bffagendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.alexribeiro.bffagendadortarefas.business.dto.out.EnderecoDTOResponse;
@@ -22,7 +22,7 @@ public interface UsuarioClient {
     UsuarioDTORequest salvaUsuario(@RequestBody UsuarioDTORequest usuarioDTO);
 
     @PostMapping("/login")
-    String login (@RequestBody LoginRequest usuarioDTO);
+    String login (@RequestBody LoginRequestDTO usuarioDTO);
 
     @DeleteMapping("/{email}")
     void deletaUsuarioPorEmail(@PathVariable String email,

@@ -2,7 +2,7 @@ package com.alexribeiro.bffagendadortarefas.business;
 
 
 import com.alexribeiro.bffagendadortarefas.business.dto.in.EnderecoDTORequest;
-import com.alexribeiro.bffagendadortarefas.business.dto.in.LoginRequest;
+import com.alexribeiro.bffagendadortarefas.business.dto.in.LoginRequestDTO;
 import com.alexribeiro.bffagendadortarefas.business.dto.in.TelefoneDTORequest;
 import com.alexribeiro.bffagendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.alexribeiro.bffagendadortarefas.business.dto.out.EnderecoDTOResponse;
@@ -25,7 +25,7 @@ public class UsuarioService {
 
     }
 
-    public  String loginUsuario(LoginRequest dto){
+    public  String loginUsuario(LoginRequestDTO dto){
         return client.login(dto);
     }
 
